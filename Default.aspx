@@ -2,9 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<div class="jumbotron">
+<div class="jumbotron py-1">
     <h1>Серверные HTML-элементы</h1>
-    <asp:Table CssClass="table table-striped" ID="Table" runat="server">
+    <asp:Table CssClass="table table-striped table-sm" ID="TableControls" runat="server">
         <asp:TableHeaderRow CssClass="thead-dark">
             <asp:TableHeaderCell ColumnSpan="2">Элемент</asp:TableHeaderCell>
             <asp:TableHeaderCell>OnServerClick</asp:TableHeaderCell>
@@ -13,19 +13,19 @@
         <asp:TableRow>
             <asp:TableCell>Input (Reset)</asp:TableCell>
             <asp:TableCell>
-                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary" id="Reset" type="reset" value="reset" />
+                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary btn-sm" id="Reset" type="reset" value="reset" />
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Input (Button)</asp:TableCell>
             <asp:TableCell>
-                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary" id="Button" type="button" value="button" />
+                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary btn-sm" id="Button" type="button" value="button" />
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Input (Submit)</asp:TableCell>
             <asp:TableCell>
-                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary" id="Submit" type="submit" value="submit" />
+                <input onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="btn btn-secondary btn-sm" id="Submit" type="submit" value="submit" />
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
@@ -71,7 +71,7 @@
         <asp:TableRow>
             <asp:TableCell>Textarea</asp:TableCell>
             <asp:TableCell>
-                <textarea onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="form-control" id="TextArea" cols="20" rows="2"></textarea>
+                <textarea onserverclick="OnServerClick" onserverchange="OnServerChange" runat="server" class="form-control" id="TextArea" rows="1"></textarea>
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>

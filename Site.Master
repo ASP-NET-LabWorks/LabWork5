@@ -39,7 +39,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <header class="mb-3">
+        <header class="mb-1">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container">
                     <a class="navbar-brand" runat="server" href="~/">Лабораторная работа 5</a>

@@ -13,13 +13,13 @@ namespace LabWork5 {
     public partial class _Default {
         
         /// <summary>
-        /// Table элемент управления.
+        /// TableControls элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table;
+        protected global::System.Web.UI.WebControls.Table TableControls;
         
         /// <summary>
         /// Reset элемент управления.

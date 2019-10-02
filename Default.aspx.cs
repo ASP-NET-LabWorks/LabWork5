@@ -1,34 +1,35 @@
 ﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections.Generic;
 
 namespace LabWork5
 {
     public partial class _Default : Page
     {
-        private string[] controls = {
-            "reset",
-            "button",
-            "submit",
-            "file",
-            "text",
-            "password",
-            "checkbox",
-            "radio",
-            "textarea",
-            "select"
-        };
+        private Dictionary<string, TableRow> controls = new Dictionary<string, TableRow>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            for (var i = 1; i < Table.Rows.Count; i++)
+            controls.Add("reset", TableControls.Rows[1]);
+            controls.Add("button", TableControls.Rows[2]);
+            controls.Add("submit", TableControls.Rows[3]);
+            controls.Add("file", TableControls.Rows[4]);
+            controls.Add("text", TableControls.Rows[5]);
+            controls.Add("password", TableControls.Rows[6]);
+            controls.Add("checkbox", TableControls.Rows[7]);
+            controls.Add("radio", TableControls.Rows[8]);
+            controls.Add("textarea", TableControls.Rows[9]);
+            controls.Add("select", TableControls.Rows[10]);
+
+            foreach (TableRow row in controls.Values)
             {
                 var cell3 = new TableCell();
                 cell3.Text = "✖";
                 var cell4 = new TableCell();
                 cell4.Text = "✖";
-                Table.Rows[i].Cells.Add(cell3);
-                Table.Rows[i].Cells.Add(cell4);
+                row.Cells.Add(cell3);
+                row.Cells.Add(cell4);
             }
         }
 
@@ -37,7 +38,7 @@ namespace LabWork5
             var controlName = ((Control)sender).ID.ToLower();
             if (controlName.Contains("radio"))
                 controlName = "radio";
-            Table.Rows[Array.IndexOf(controls, controlName) + 1].Cells[2].Text = "✔";
+            controls[controlName].Cells[2].Text = "✔";
         }
 
         protected void OnServerChange(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace LabWork5
             var controlName = ((Control)sender).ID.ToLower();
             if (controlName.Contains("radio"))
                 controlName = "radio";
-            Table.Rows[Array.IndexOf(controls, controlName) + 1].Cells[3].Text = "✔";
+            controls[controlName].Cells[3].Text = "✔";
         }
     }
 }
